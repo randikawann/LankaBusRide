@@ -13,7 +13,7 @@ protocol BusRepositoryProtocol {
 
 final class BusRepository: BusRepositoryProtocol {
     private let apiManager = APIManager.shared
-
+    
     func fetchRoutes(completion: @escaping (Result<[BusRoute], Error>) -> Void) {
         apiManager.request(endpoint: .getRoutes) { (result: Result<[BusRouteDTO], Error>) in
             switch result {
@@ -24,16 +24,6 @@ final class BusRepository: BusRepositoryProtocol {
                 completion(.failure(error))
             }
         }
-    }
-}
-
-extension BusRouteDTO {
-    func toDomain() -> BusRoute {
-        BusRoute(
-            id: id,
-            title: "\(company) | \(source) → \(destination)",
-            timeRange: "\(departure) - \(arrival)"
-        )
     }
 }
 

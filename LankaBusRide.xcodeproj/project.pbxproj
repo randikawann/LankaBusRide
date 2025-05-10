@@ -28,6 +28,11 @@
 		00CD4EF22DCF312300F7A801 /* NetworkError+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00CD4EF12DCF312300F7A801 /* NetworkError+Extensions.swift */; };
 		00CD4EF42DCF316600F7A801 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00CD4EF32DCF316600F7A801 /* NetworkError.swift */; };
 		00CD4EF72DCF377800F7A801 /* BusCardTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00CD4EF62DCF377800F7A801 /* BusCardTableViewCell.swift */; };
+		00CD4EF92DCF391000F7A801 /* BusRouteDTO+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00CD4EF82DCF391000F7A801 /* BusRouteDTO+Extensions.swift */; };
+		00CD4EFB2DCF3D0A00F7A801 /* UserDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00CD4EFA2DCF3D0A00F7A801 /* UserDTO.swift */; };
+		00CD4EFD2DCF3DCB00F7A801 /* UserRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00CD4EFC2DCF3DCB00F7A801 /* UserRepository.swift */; };
+		00CD4EFF2DCF3E2700F7A801 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00CD4EFE2DCF3E2700F7A801 /* User.swift */; };
+		00CD4F012DCF3FA600F7A801 /* UserDTO+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00CD4F002DCF3FA600F7A801 /* UserDTO+Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +78,11 @@
 		00CD4EF12DCF312300F7A801 /* NetworkError+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NetworkError+Extensions.swift"; sourceTree = "<group>"; };
 		00CD4EF32DCF316600F7A801 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 		00CD4EF62DCF377800F7A801 /* BusCardTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusCardTableViewCell.swift; sourceTree = "<group>"; };
+		00CD4EF82DCF391000F7A801 /* BusRouteDTO+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BusRouteDTO+Extensions.swift"; sourceTree = "<group>"; };
+		00CD4EFA2DCF3D0A00F7A801 /* UserDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDTO.swift; sourceTree = "<group>"; };
+		00CD4EFC2DCF3DCB00F7A801 /* UserRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRepository.swift; sourceTree = "<group>"; };
+		00CD4EFE2DCF3E2700F7A801 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		00CD4F002DCF3FA600F7A801 /* UserDTO+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDTO+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -181,6 +191,7 @@
 			isa = PBXGroup;
 			children = (
 				00CD4EE92DCF2E9200F7A801 /* BusRepository.swift */,
+				00CD4EFC2DCF3DCB00F7A801 /* UserRepository.swift */,
 			);
 			path = Repository;
 			sourceTree = "<group>";
@@ -199,6 +210,8 @@
 			isa = PBXGroup;
 			children = (
 				00CD4EF12DCF312300F7A801 /* NetworkError+Extensions.swift */,
+				00CD4EF82DCF391000F7A801 /* BusRouteDTO+Extensions.swift */,
+				00CD4F002DCF3FA600F7A801 /* UserDTO+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -221,6 +234,7 @@
 			isa = PBXGroup;
 			children = (
 				00CD4EE72DCF2DB600F7A801 /* BusRoute.swift */,
+				00CD4EFE2DCF3E2700F7A801 /* User.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -247,6 +261,7 @@
 			isa = PBXGroup;
 			children = (
 				00CD4EE52DCF2D7700F7A801 /* BusRouteDTO.swift */,
+				00CD4EFA2DCF3D0A00F7A801 /* UserDTO.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -393,9 +408,12 @@
 			files = (
 				00CD4EA62DCF269200F7A801 /* ViewController.swift in Sources */,
 				00CD4EA22DCF269200F7A801 /* AppDelegate.swift in Sources */,
+				00CD4F012DCF3FA600F7A801 /* UserDTO+Extensions.swift in Sources */,
+				00CD4EF92DCF391000F7A801 /* BusRouteDTO+Extensions.swift in Sources */,
 				00CD4EE82DCF2DB600F7A801 /* BusRoute.swift in Sources */,
 				00CD4EF22DCF312300F7A801 /* NetworkError+Extensions.swift in Sources */,
 				00CD4EF72DCF377800F7A801 /* BusCardTableViewCell.swift in Sources */,
+				00CD4EFD2DCF3DCB00F7A801 /* UserRepository.swift in Sources */,
 				00CD4EEC2DCF2F3D00F7A801 /* HomeViewModel.swift in Sources */,
 				00CD4ED92DCF2C0D00F7A801 /* APIManager.swift in Sources */,
 				00CD4EAC2DCF269200F7A801 /* LankaBusRide.xcdatamodeld in Sources */,
@@ -403,7 +421,9 @@
 				00CD4EF02DCF2FB400F7A801 /* HomeViewController.swift in Sources */,
 				00CD4EDB2DCF2C3000F7A801 /* Endpoints.swift in Sources */,
 				00CD4EF42DCF316600F7A801 /* NetworkError.swift in Sources */,
+				00CD4EFF2DCF3E2700F7A801 /* User.swift in Sources */,
 				00CD4EE62DCF2D7700F7A801 /* BusRouteDTO.swift in Sources */,
+				00CD4EFB2DCF3D0A00F7A801 /* UserDTO.swift in Sources */,
 				00CD4EA42DCF269200F7A801 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
