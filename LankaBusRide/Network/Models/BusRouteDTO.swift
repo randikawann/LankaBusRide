@@ -14,4 +14,6 @@ struct BusRouteDTO: Codable {
     let destination: String
     let departure: String
     let arrival: String
+    let routeNumber: String
+    let duration: String
 }

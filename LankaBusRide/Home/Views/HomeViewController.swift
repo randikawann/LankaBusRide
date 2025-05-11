@@ -16,12 +16,18 @@ class HomeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        tableView.dataSource = self
+        setupTableView()
         bindViewModel()
         viewModel.loadUser()
         viewModel.loadRoutes()
     }
     
+    private func setupTableView() {
+        let nib = UINib(nibName: "AvailableBusesCardTableViewCell", bundle: nil)
+        tableView.register(nib, forCellReuseIdentifier: "AvailableBusesCardTableViewCell")
+        tableView.rowHeight = 100
+        tableView.dataSource = self
+    }
     private func bindViewModel() {
         viewModel.onUserDataUpdate = { [weak self] in
             DispatchQueue.main.async {
@@ -45,10 +51,17 @@ extension HomeViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell1",for: indexPath) as! BusCardTableViewCell
-        
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "AvailableBusesCardTableViewCell", for: indexPath) as? AvailableBusesCardTableViewCell else {
+            return UITableViewCell()
+        }
         let route = viewModel.routes[indexPath.row]
-        cell.titleHeader.text = route.title
+        cell.fromCity.text = route.source
+        cell.toCity.text = route.destination
+        cell.companyName.text = route.companyName
+        cell.fromTime.text = "From: "+route.departure
+        cell.toTime.text = "To: "+route.arrival
+        cell.routeNumber.text = route.routeNumber
+        cell.duration.text = route.duration
         return cell
     }
 }

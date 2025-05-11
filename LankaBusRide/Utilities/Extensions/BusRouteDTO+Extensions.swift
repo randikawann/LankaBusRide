@@ -11,8 +11,13 @@ extension BusRouteDTO {
     func toDomain() -> BusRoute {
         BusRoute(
             id: id,
-            title: "\(company) | \(source) → \(destination)",
-            timeRange: "\(departure) - \(arrival)"
+            companyName: company,
+            source: source,
+            destination: destination,
+            departure: departure,
+            arrival: arrival,
+            routeNumber: routeNumber,
+            duration: duration
         )
     }
 }
