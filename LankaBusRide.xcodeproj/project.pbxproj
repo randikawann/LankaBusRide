@@ -17,6 +17,22 @@
 		00CD4EBC2DCF269300F7A801 /* LankaBusRideTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00CD4EBB2DCF269300F7A801 /* LankaBusRideTests.swift */; };
 		00CD4EC62DCF269300F7A801 /* LankaBusRideUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00CD4EC52DCF269300F7A801 /* LankaBusRideUITests.swift */; };
 		00CD4EC82DCF269300F7A801 /* LankaBusRideUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00CD4EC72DCF269300F7A801 /* LankaBusRideUITestsLaunchTests.swift */; };
+		00CD4ED92DCF2C0D00F7A801 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00CD4ED82DCF2C0D00F7A801 /* APIManager.swift */; };
+		00CD4EDB2DCF2C3000F7A801 /* Endpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00CD4EDA2DCF2C3000F7A801 /* Endpoints.swift */; };
+		00CD4EE62DCF2D7700F7A801 /* BusRouteDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00CD4EE52DCF2D7700F7A801 /* BusRouteDTO.swift */; };
+		00CD4EE82DCF2DB600F7A801 /* BusRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00CD4EE72DCF2DB600F7A801 /* BusRoute.swift */; };
+		00CD4EEA2DCF2E9200F7A801 /* BusRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00CD4EE92DCF2E9200F7A801 /* BusRepository.swift */; };
+		00CD4EEC2DCF2F3D00F7A801 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00CD4EEB2DCF2F3D00F7A801 /* HomeViewModel.swift */; };
+		00CD4EEE2DCF2F8800F7A801 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 00CD4EED2DCF2F8800F7A801 /* Home.storyboard */; };
+		00CD4EF02DCF2FB400F7A801 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00CD4EEF2DCF2FB400F7A801 /* HomeViewController.swift */; };
+		00CD4EF22DCF312300F7A801 /* NetworkError+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00CD4EF12DCF312300F7A801 /* NetworkError+Extensions.swift */; };
+		00CD4EF42DCF316600F7A801 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00CD4EF32DCF316600F7A801 /* NetworkError.swift */; };
+		00CD4EF72DCF377800F7A801 /* BusCardTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00CD4EF62DCF377800F7A801 /* BusCardTableViewCell.swift */; };
+		00CD4EF92DCF391000F7A801 /* BusRouteDTO+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00CD4EF82DCF391000F7A801 /* BusRouteDTO+Extensions.swift */; };
+		00CD4EFB2DCF3D0A00F7A801 /* UserDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00CD4EFA2DCF3D0A00F7A801 /* UserDTO.swift */; };
+		00CD4EFD2DCF3DCB00F7A801 /* UserRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00CD4EFC2DCF3DCB00F7A801 /* UserRepository.swift */; };
+		00CD4EFF2DCF3E2700F7A801 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00CD4EFE2DCF3E2700F7A801 /* User.swift */; };
+		00CD4F012DCF3FA600F7A801 /* UserDTO+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00CD4F002DCF3FA600F7A801 /* UserDTO+Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +67,22 @@
 		00CD4EC12DCF269300F7A801 /* LankaBusRideUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LankaBusRideUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		00CD4EC52DCF269300F7A801 /* LankaBusRideUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LankaBusRideUITests.swift; sourceTree = "<group>"; };
 		00CD4EC72DCF269300F7A801 /* LankaBusRideUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LankaBusRideUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		00CD4ED82DCF2C0D00F7A801 /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
+		00CD4EDA2DCF2C3000F7A801 /* Endpoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoints.swift; sourceTree = "<group>"; };
+		00CD4EE52DCF2D7700F7A801 /* BusRouteDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusRouteDTO.swift; sourceTree = "<group>"; };
+		00CD4EE72DCF2DB600F7A801 /* BusRoute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusRoute.swift; sourceTree = "<group>"; };
+		00CD4EE92DCF2E9200F7A801 /* BusRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusRepository.swift; sourceTree = "<group>"; };
+		00CD4EEB2DCF2F3D00F7A801 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		00CD4EED2DCF2F8800F7A801 /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
+		00CD4EEF2DCF2FB400F7A801 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		00CD4EF12DCF312300F7A801 /* NetworkError+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NetworkError+Extensions.swift"; sourceTree = "<group>"; };
+		00CD4EF32DCF316600F7A801 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
+		00CD4EF62DCF377800F7A801 /* BusCardTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusCardTableViewCell.swift; sourceTree = "<group>"; };
+		00CD4EF82DCF391000F7A801 /* BusRouteDTO+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BusRouteDTO+Extensions.swift"; sourceTree = "<group>"; };
+		00CD4EFA2DCF3D0A00F7A801 /* UserDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDTO.swift; sourceTree = "<group>"; };
+		00CD4EFC2DCF3DCB00F7A801 /* UserRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRepository.swift; sourceTree = "<group>"; };
+		00CD4EFE2DCF3E2700F7A801 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		00CD4F002DCF3FA600F7A801 /* UserDTO+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDTO+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +133,9 @@
 		00CD4EA02DCF269200F7A801 /* LankaBusRide */ = {
 			isa = PBXGroup;
 			children = (
+				00CD4EDD2DCF2C6600F7A801 /* Utilities */,
+				00CD4ED72DCF295700F7A801 /* Home */,
+				00CD4ED42DCF285A00F7A801 /* Network */,
 				00CD4EA12DCF269200F7A801 /* AppDelegate.swift */,
 				00CD4EA32DCF269200F7A801 /* SceneDelegate.swift */,
 				00CD4EA52DCF269200F7A801 /* ViewController.swift */,
@@ -128,6 +163,115 @@
 				00CD4EC72DCF269300F7A801 /* LankaBusRideUITestsLaunchTests.swift */,
 			);
 			path = LankaBusRideUITests;
+			sourceTree = "<group>";
+		};
+		00CD4ED42DCF285A00F7A801 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				00CD4EE42DCF2D4100F7A801 /* Models */,
+				00CD4EDC2DCF2C3800F7A801 /* Repository */,
+				00CD4ED82DCF2C0D00F7A801 /* APIManager.swift */,
+				00CD4EDA2DCF2C3000F7A801 /* Endpoints.swift */,
+				00CD4EF32DCF316600F7A801 /* NetworkError.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		00CD4ED72DCF295700F7A801 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				00CD4EE32DCF2CC000F7A801 /* Views */,
+				00CD4EE22DCF2CB300F7A801 /* ViewModel */,
+				00CD4EE12DCF2CA900F7A801 /* Model */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		00CD4EDC2DCF2C3800F7A801 /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				00CD4EE92DCF2E9200F7A801 /* BusRepository.swift */,
+				00CD4EFC2DCF3DCB00F7A801 /* UserRepository.swift */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		00CD4EDD2DCF2C6600F7A801 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				00CD4EE02DCF2C8E00F7A801 /* Constants */,
+				00CD4EDF2DCF2C8500F7A801 /* Helpers */,
+				00CD4EDE2DCF2C7A00F7A801 /* Extensions */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		00CD4EDE2DCF2C7A00F7A801 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				00CD4EF12DCF312300F7A801 /* NetworkError+Extensions.swift */,
+				00CD4EF82DCF391000F7A801 /* BusRouteDTO+Extensions.swift */,
+				00CD4F002DCF3FA600F7A801 /* UserDTO+Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		00CD4EDF2DCF2C8500F7A801 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		00CD4EE02DCF2C8E00F7A801 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		00CD4EE12DCF2CA900F7A801 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				00CD4EE72DCF2DB600F7A801 /* BusRoute.swift */,
+				00CD4EFE2DCF3E2700F7A801 /* User.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		00CD4EE22DCF2CB300F7A801 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				00CD4EEB2DCF2F3D00F7A801 /* HomeViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		00CD4EE32DCF2CC000F7A801 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				00CD4EF52DCF372D00F7A801 /* CustomViews */,
+				00CD4EED2DCF2F8800F7A801 /* Home.storyboard */,
+				00CD4EEF2DCF2FB400F7A801 /* HomeViewController.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		00CD4EE42DCF2D4100F7A801 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				00CD4EE52DCF2D7700F7A801 /* BusRouteDTO.swift */,
+				00CD4EFA2DCF3D0A00F7A801 /* UserDTO.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		00CD4EF52DCF372D00F7A801 /* CustomViews */ = {
+			isa = PBXGroup;
+			children = (
+				00CD4EF62DCF377800F7A801 /* BusCardTableViewCell.swift */,
+			);
+			path = CustomViews;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -236,6 +380,7 @@
 			files = (
 				00CD4EAE2DCF269300F7A801 /* Assets.xcassets in Resources */,
 				00CD4EB12DCF269300F7A801 /* Base in Resources */,
+				00CD4EEE2DCF2F8800F7A801 /* Home.storyboard in Resources */,
 				00CD4EA92DCF269200F7A801 /* Base in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -263,7 +408,22 @@
 			files = (
 				00CD4EA62DCF269200F7A801 /* ViewController.swift in Sources */,
 				00CD4EA22DCF269200F7A801 /* AppDelegate.swift in Sources */,
+				00CD4F012DCF3FA600F7A801 /* UserDTO+Extensions.swift in Sources */,
+				00CD4EF92DCF391000F7A801 /* BusRouteDTO+Extensions.swift in Sources */,
+				00CD4EE82DCF2DB600F7A801 /* BusRoute.swift in Sources */,
+				00CD4EF22DCF312300F7A801 /* NetworkError+Extensions.swift in Sources */,
+				00CD4EF72DCF377800F7A801 /* BusCardTableViewCell.swift in Sources */,
+				00CD4EFD2DCF3DCB00F7A801 /* UserRepository.swift in Sources */,
+				00CD4EEC2DCF2F3D00F7A801 /* HomeViewModel.swift in Sources */,
+				00CD4ED92DCF2C0D00F7A801 /* APIManager.swift in Sources */,
 				00CD4EAC2DCF269200F7A801 /* LankaBusRide.xcdatamodeld in Sources */,
+				00CD4EEA2DCF2E9200F7A801 /* BusRepository.swift in Sources */,
+				00CD4EF02DCF2FB400F7A801 /* HomeViewController.swift in Sources */,
+				00CD4EDB2DCF2C3000F7A801 /* Endpoints.swift in Sources */,
+				00CD4EF42DCF316600F7A801 /* NetworkError.swift in Sources */,
+				00CD4EFF2DCF3E2700F7A801 /* User.swift in Sources */,
+				00CD4EE62DCF2D7700F7A801 /* BusRouteDTO.swift in Sources */,
+				00CD4EFB2DCF3D0A00F7A801 /* UserDTO.swift in Sources */,
 				00CD4EA42DCF269200F7A801 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
