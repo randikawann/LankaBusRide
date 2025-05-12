@@ -8,13 +8,16 @@
 import Foundation
 
 class SearchViewModel {
+    typealias RouteNumberChangeHandler = (String) -> Void
+    typealias FilteredRoutesChangeHandler = () -> Void
+    typealias ErrorHandler = (Error) -> Void
+    
     private(set) var allRouteInfos: [RouteInfo] = []
     private(set) var allBusRoutes: [BusRoute] = []
     
     var selectedRoute: RouteInfo? {
         didSet {
-            routeNumberDidChange?(selectedRoute?.routeNumber ?? "")
-            filterRoutes(for: selectedRoute)
+            handleRouteSelection()
         }
     }
     
@@ -24,8 +27,9 @@ class SearchViewModel {
         }
     }
     
-    var routeNumberDidChange: ((String) -> Void)?
-    var filteredRoutesDidChange: (() -> Void)?
+    var routeNumberDidChange: RouteNumberChangeHandler?
+    var filteredRoutesDidChange: FilteredRoutesChangeHandler?
+    var didEncounterError: ErrorHandler?
     
     private let busRepository: BusRepositoryProtocol
     
@@ -33,9 +37,14 @@ class SearchViewModel {
         self.busRepository = busRepository
     }
     
+    private func handleRouteSelection() {
+        routeNumberDidChange?(selectedRoute?.routeNumber ?? "")
+        filterRoutes(for: selectedRoute)
+    }
+    
     private func filterRoutes(for route: RouteInfo?) {
         if let route = route {
-            filteredBusRoutes = allBusRoutes.filter { $0.routeNumber == route.routeNumber }
+            filteredBusRoutes = allBusRoutes.filtered(by: route)
         } else {
             filteredBusRoutes = []
         }
@@ -54,8 +63,9 @@ class SearchViewModel {
                     self?.allBusRoutes = routes
                     
                 case .failure(let error):
-                    print("Error loading routes: \(error)")
+                    self?.didEncounterError?(error)
                     self?.allRouteInfos = []
+                    self?.allBusRoutes = []
                 }
                 completion()
             }

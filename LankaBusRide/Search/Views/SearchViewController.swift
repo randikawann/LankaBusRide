@@ -29,6 +29,10 @@ class SearchViewController: UIViewController {
         viewModel.filteredRoutesDidChange = { [weak self] in
             self?.filteredBusRouteTableView.reloadData()
         }
+        viewModel.didEncounterError = { [weak self] error in
+            print("Encountered error: \(error.localizedDescription)")
+        }
+        
         let nib1 = UINib(nibName: "RouteTableViewCell", bundle: nil)
         recentsRouteTableView.register(nib1, forCellReuseIdentifier: "RouteTableViewCell")
         recentsRouteTableView.dataSource = self

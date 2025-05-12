@@ -14,6 +14,7 @@
 		006070772DD193A7009AB627 /* MockUserRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 006070762DD193A7009AB627 /* MockUserRepository.swift */; };
 		006070792DD193CF009AB627 /* MockBusRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 006070782DD193CF009AB627 /* MockBusRepository.swift */; };
 		0060707B2DD19402009AB627 /* HomeViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0060707A2DD19402009AB627 /* HomeViewModelTests.swift */; };
+		0064C62E2DD1FD8F00E175FB /* BusRoute+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0064C62D2DD1FD8F00E175FB /* BusRoute+Extensions.swift */; };
 		00AAB7372DD1D84C00945157 /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00AAB7362DD1D84C00945157 /* SearchViewModel.swift */; };
 		00AAB73C2DD1DC0300945157 /* BusRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00AAB73B2DD1DC0300945157 /* BusRoute.swift */; };
 		00AAB73F2DD1DDC500945157 /* RouteInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00AAB73E2DD1DDC500945157 /* RouteInfo.swift */; };
@@ -70,6 +71,7 @@
 		006070762DD193A7009AB627 /* MockUserRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockUserRepository.swift; sourceTree = "<group>"; };
 		006070782DD193CF009AB627 /* MockBusRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockBusRepository.swift; sourceTree = "<group>"; };
 		0060707A2DD19402009AB627 /* HomeViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModelTests.swift; sourceTree = "<group>"; };
+		0064C62D2DD1FD8F00E175FB /* BusRoute+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BusRoute+Extensions.swift"; sourceTree = "<group>"; };
 		00AAB7362DD1D84C00945157 /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
 		00AAB73B2DD1DC0300945157 /* BusRoute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusRoute.swift; sourceTree = "<group>"; };
 		00AAB73E2DD1DDC500945157 /* RouteInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouteInfo.swift; sourceTree = "<group>"; };
@@ -299,6 +301,7 @@
 				00CD4EF12DCF312300F7A801 /* NetworkError+Extensions.swift */,
 				00CD4EF82DCF391000F7A801 /* BusRouteDTO+Extensions.swift */,
 				00CD4F002DCF3FA600F7A801 /* UserDTO+Extensions.swift */,
+				0064C62D2DD1FD8F00E175FB /* BusRoute+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -495,6 +498,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0064C62E2DD1FD8F00E175FB /* BusRoute+Extensions.swift in Sources */,
 				00CD4EA62DCF269200F7A801 /* ViewController.swift in Sources */,
 				00CD4EA22DCF269200F7A801 /* AppDelegate.swift in Sources */,
 				00AAB73C2DD1DC0300945157 /* BusRoute.swift in Sources */,
