@@ -37,6 +37,12 @@ class SearchViewModel {
         self.busRepository = busRepository
     }
     
+#if DEBUG
+    func setAllBusRoutes(_ routes: [BusRoute]) {
+        self.allBusRoutes = routes
+    }
+#endif
+    
     private func handleRouteSelection() {
         routeNumberDidChange?(selectedRoute?.routeNumber ?? "")
         filterRoutes(for: selectedRoute)

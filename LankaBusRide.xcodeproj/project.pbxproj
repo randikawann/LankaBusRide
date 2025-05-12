@@ -15,6 +15,7 @@
 		006070792DD193CF009AB627 /* MockBusRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 006070782DD193CF009AB627 /* MockBusRepository.swift */; };
 		0060707B2DD19402009AB627 /* HomeViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0060707A2DD19402009AB627 /* HomeViewModelTests.swift */; };
 		0064C62E2DD1FD8F00E175FB /* BusRoute+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0064C62D2DD1FD8F00E175FB /* BusRoute+Extensions.swift */; };
+		0064C6302DD1FF6000E175FB /* SearchViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0064C62F2DD1FF6000E175FB /* SearchViewModelTests.swift */; };
 		00AAB7372DD1D84C00945157 /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00AAB7362DD1D84C00945157 /* SearchViewModel.swift */; };
 		00AAB73C2DD1DC0300945157 /* BusRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00AAB73B2DD1DC0300945157 /* BusRoute.swift */; };
 		00AAB73F2DD1DDC500945157 /* RouteInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00AAB73E2DD1DDC500945157 /* RouteInfo.swift */; };
@@ -72,6 +73,7 @@
 		006070782DD193CF009AB627 /* MockBusRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockBusRepository.swift; sourceTree = "<group>"; };
 		0060707A2DD19402009AB627 /* HomeViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModelTests.swift; sourceTree = "<group>"; };
 		0064C62D2DD1FD8F00E175FB /* BusRoute+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BusRoute+Extensions.swift"; sourceTree = "<group>"; };
+		0064C62F2DD1FF6000E175FB /* SearchViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModelTests.swift; sourceTree = "<group>"; };
 		00AAB7362DD1D84C00945157 /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
 		00AAB73B2DD1DC0300945157 /* BusRoute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusRoute.swift; sourceTree = "<group>"; };
 		00AAB73E2DD1DDC500945157 /* RouteInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouteInfo.swift; sourceTree = "<group>"; };
@@ -240,6 +242,7 @@
 				006070752DD1938B009AB627 /* Mocks */,
 				00CD4EBB2DCF269300F7A801 /* LankaBusRideTests.swift */,
 				0060707A2DD19402009AB627 /* HomeViewModelTests.swift */,
+				0064C62F2DD1FF6000E175FB /* SearchViewModelTests.swift */,
 			);
 			path = LankaBusRideTests;
 			sourceTree = "<group>";
@@ -533,6 +536,7 @@
 				00CD4EBC2DCF269300F7A801 /* LankaBusRideTests.swift in Sources */,
 				006070792DD193CF009AB627 /* MockBusRepository.swift in Sources */,
 				0060707B2DD19402009AB627 /* HomeViewModelTests.swift in Sources */,
+				0064C6302DD1FF6000E175FB /* SearchViewModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
