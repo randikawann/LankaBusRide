@@ -29,7 +29,6 @@
 		00CD4EF02DCF2FB400F7A801 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00CD4EEF2DCF2FB400F7A801 /* HomeViewController.swift */; };
 		00CD4EF22DCF312300F7A801 /* NetworkError+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00CD4EF12DCF312300F7A801 /* NetworkError+Extensions.swift */; };
 		00CD4EF42DCF316600F7A801 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00CD4EF32DCF316600F7A801 /* NetworkError.swift */; };
-		00CD4EF72DCF377800F7A801 /* BusCardTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00CD4EF62DCF377800F7A801 /* BusCardTableViewCell.swift */; };
 		00CD4EF92DCF391000F7A801 /* BusRouteDTO+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00CD4EF82DCF391000F7A801 /* BusRouteDTO+Extensions.swift */; };
 		00CD4EFB2DCF3D0A00F7A801 /* UserDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00CD4EFA2DCF3D0A00F7A801 /* UserDTO.swift */; };
 		00CD4EFD2DCF3DCB00F7A801 /* UserRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00CD4EFC2DCF3DCB00F7A801 /* UserRepository.swift */; };
@@ -81,7 +80,6 @@
 		00CD4EEF2DCF2FB400F7A801 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		00CD4EF12DCF312300F7A801 /* NetworkError+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NetworkError+Extensions.swift"; sourceTree = "<group>"; };
 		00CD4EF32DCF316600F7A801 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
-		00CD4EF62DCF377800F7A801 /* BusCardTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusCardTableViewCell.swift; sourceTree = "<group>"; };
 		00CD4EF82DCF391000F7A801 /* BusRouteDTO+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BusRouteDTO+Extensions.swift"; sourceTree = "<group>"; };
 		00CD4EFA2DCF3D0A00F7A801 /* UserDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDTO.swift; sourceTree = "<group>"; };
 		00CD4EFC2DCF3DCB00F7A801 /* UserRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRepository.swift; sourceTree = "<group>"; };
@@ -273,7 +271,6 @@
 		00CD4EF52DCF372D00F7A801 /* CustomViews */ = {
 			isa = PBXGroup;
 			children = (
-				00CD4EF62DCF377800F7A801 /* BusCardTableViewCell.swift */,
 				004B11BA2DD071B000BB3CAE /* AvailableBusesCardTableViewCell.swift */,
 				004B11BB2DD071B000BB3CAE /* AvailableBusesCardTableViewCell.xib */,
 			);
@@ -419,7 +416,6 @@
 				00CD4EF92DCF391000F7A801 /* BusRouteDTO+Extensions.swift in Sources */,
 				00CD4EE82DCF2DB600F7A801 /* BusRoute.swift in Sources */,
 				00CD4EF22DCF312300F7A801 /* NetworkError+Extensions.swift in Sources */,
-				00CD4EF72DCF377800F7A801 /* BusCardTableViewCell.swift in Sources */,
 				00CD4EFD2DCF3DCB00F7A801 /* UserRepository.swift in Sources */,
 				00CD4EEC2DCF2F3D00F7A801 /* HomeViewModel.swift in Sources */,
 				00CD4ED92DCF2C0D00F7A801 /* APIManager.swift in Sources */,
