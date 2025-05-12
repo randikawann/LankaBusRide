@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		004B11BC2DD071B000BB3CAE /* AvailableBusesCardTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 004B11BA2DD071B000BB3CAE /* AvailableBusesCardTableViewCell.swift */; };
 		004B11BD2DD071B000BB3CAE /* AvailableBusesCardTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 004B11BB2DD071B000BB3CAE /* AvailableBusesCardTableViewCell.xib */; };
+		006070772DD193A7009AB627 /* MockUserRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 006070762DD193A7009AB627 /* MockUserRepository.swift */; };
+		006070792DD193CF009AB627 /* MockBusRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 006070782DD193CF009AB627 /* MockBusRepository.swift */; };
+		0060707B2DD19402009AB627 /* HomeViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0060707A2DD19402009AB627 /* HomeViewModelTests.swift */; };
 		00CD4EA22DCF269200F7A801 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00CD4EA12DCF269200F7A801 /* AppDelegate.swift */; };
 		00CD4EA42DCF269200F7A801 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00CD4EA32DCF269200F7A801 /* SceneDelegate.swift */; };
 		00CD4EA62DCF269200F7A801 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00CD4EA52DCF269200F7A801 /* ViewController.swift */; };
@@ -56,6 +59,9 @@
 /* Begin PBXFileReference section */
 		004B11BA2DD071B000BB3CAE /* AvailableBusesCardTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvailableBusesCardTableViewCell.swift; sourceTree = "<group>"; };
 		004B11BB2DD071B000BB3CAE /* AvailableBusesCardTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AvailableBusesCardTableViewCell.xib; sourceTree = "<group>"; };
+		006070762DD193A7009AB627 /* MockUserRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockUserRepository.swift; sourceTree = "<group>"; };
+		006070782DD193CF009AB627 /* MockBusRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockBusRepository.swift; sourceTree = "<group>"; };
+		0060707A2DD19402009AB627 /* HomeViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModelTests.swift; sourceTree = "<group>"; };
 		00CD4E9E2DCF269200F7A801 /* LankaBusRide.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LankaBusRide.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		00CD4EA12DCF269200F7A801 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		00CD4EA32DCF269200F7A801 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -112,6 +118,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		006070752DD1938B009AB627 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				006070762DD193A7009AB627 /* MockUserRepository.swift */,
+				006070782DD193CF009AB627 /* MockBusRepository.swift */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
 		00CD4E952DCF269200F7A801 = {
 			isa = PBXGroup;
 			children = (
@@ -153,7 +168,9 @@
 		00CD4EBA2DCF269300F7A801 /* LankaBusRideTests */ = {
 			isa = PBXGroup;
 			children = (
+				006070752DD1938B009AB627 /* Mocks */,
 				00CD4EBB2DCF269300F7A801 /* LankaBusRideTests.swift */,
+				0060707A2DD19402009AB627 /* HomeViewModelTests.swift */,
 			);
 			path = LankaBusRideTests;
 			sourceTree = "<group>";
@@ -436,7 +453,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				006070772DD193A7009AB627 /* MockUserRepository.swift in Sources */,
 				00CD4EBC2DCF269300F7A801 /* LankaBusRideTests.swift in Sources */,
+				006070792DD193CF009AB627 /* MockBusRepository.swift in Sources */,
+				0060707B2DD19402009AB627 /* HomeViewModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
