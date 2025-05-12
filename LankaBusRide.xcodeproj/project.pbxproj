@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		003C5E332DD1BDA000E705F8 /* Search.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 003C5E322DD1BDA000E705F8 /* Search.storyboard */; };
+		003C5E352DD1BE5C00E705F8 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 003C5E342DD1BE5C00E705F8 /* SearchViewController.swift */; };
 		004B11BC2DD071B000BB3CAE /* AvailableBusesCardTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 004B11BA2DD071B000BB3CAE /* AvailableBusesCardTableViewCell.swift */; };
 		004B11BD2DD071B000BB3CAE /* AvailableBusesCardTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 004B11BB2DD071B000BB3CAE /* AvailableBusesCardTableViewCell.xib */; };
 		006070772DD193A7009AB627 /* MockUserRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 006070762DD193A7009AB627 /* MockUserRepository.swift */; };
@@ -57,6 +59,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		003C5E322DD1BDA000E705F8 /* Search.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Search.storyboard; sourceTree = "<group>"; };
+		003C5E342DD1BE5C00E705F8 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		004B11BA2DD071B000BB3CAE /* AvailableBusesCardTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvailableBusesCardTableViewCell.swift; sourceTree = "<group>"; };
 		004B11BB2DD071B000BB3CAE /* AvailableBusesCardTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AvailableBusesCardTableViewCell.xib; sourceTree = "<group>"; };
 		006070762DD193A7009AB627 /* MockUserRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockUserRepository.swift; sourceTree = "<group>"; };
@@ -118,6 +122,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		003C5E302DD1BD6E00E705F8 /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				003C5E312DD1BD9100E705F8 /* Views */,
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
+		003C5E312DD1BD9100E705F8 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				003C5E322DD1BDA000E705F8 /* Search.storyboard */,
+				003C5E342DD1BE5C00E705F8 /* SearchViewController.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		006070752DD1938B009AB627 /* Mocks */ = {
 			isa = PBXGroup;
 			children = (
@@ -151,6 +172,7 @@
 			isa = PBXGroup;
 			children = (
 				00CD4EDD2DCF2C6600F7A801 /* Utilities */,
+				003C5E302DD1BD6E00E705F8 /* Search */,
 				00CD4ED72DCF295700F7A801 /* Home */,
 				00CD4ED42DCF285A00F7A801 /* Network */,
 				00CD4EA12DCF269200F7A801 /* AppDelegate.swift */,
@@ -402,6 +424,7 @@
 				00CD4EB12DCF269300F7A801 /* Base in Resources */,
 				00CD4EEE2DCF2F8800F7A801 /* Home.storyboard in Resources */,
 				00CD4EA92DCF269200F7A801 /* Base in Resources */,
+				003C5E332DD1BDA000E705F8 /* Search.storyboard in Resources */,
 				004B11BD2DD071B000BB3CAE /* AvailableBusesCardTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -437,6 +460,7 @@
 				00CD4EEC2DCF2F3D00F7A801 /* HomeViewModel.swift in Sources */,
 				00CD4ED92DCF2C0D00F7A801 /* APIManager.swift in Sources */,
 				00CD4EAC2DCF269200F7A801 /* LankaBusRide.xcdatamodeld in Sources */,
+				003C5E352DD1BE5C00E705F8 /* SearchViewController.swift in Sources */,
 				00CD4EEA2DCF2E9200F7A801 /* BusRepository.swift in Sources */,
 				00CD4EF02DCF2FB400F7A801 /* HomeViewController.swift in Sources */,
 				00CD4EDB2DCF2C3000F7A801 /* Endpoints.swift in Sources */,
