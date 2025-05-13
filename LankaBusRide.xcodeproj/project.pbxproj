@@ -48,6 +48,7 @@
 		00F8A8372DD32102008BCC9B /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00F8A8362DD32102008BCC9B /* DetailViewController.swift */; };
 		00F8A8392DD3219F008BCC9B /* BusDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00F8A8382DD3219F008BCC9B /* BusDetail.swift */; };
 		00F8A83D2DD328F4008BCC9B /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00F8A83C2DD328F4008BCC9B /* DetailViewModel.swift */; };
+		00F8A83F2DD34BD4008BCC9B /* DetailViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00F8A83E2DD34BD4008BCC9B /* DetailViewModelTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -113,6 +114,7 @@
 		00F8A8362DD32102008BCC9B /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		00F8A8382DD3219F008BCC9B /* BusDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusDetail.swift; sourceTree = "<group>"; };
 		00F8A83C2DD328F4008BCC9B /* DetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
+		00F8A83E2DD34BD4008BCC9B /* DetailViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModelTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -250,6 +252,7 @@
 				00CD4EBB2DCF269300F7A801 /* LankaBusRideTests.swift */,
 				0060707A2DD19402009AB627 /* HomeViewModelTests.swift */,
 				0064C62F2DD1FF6000E175FB /* SearchViewModelTests.swift */,
+				00F8A83E2DD34BD4008BCC9B /* DetailViewModelTests.swift */,
 			);
 			path = LankaBusRideTests;
 			sourceTree = "<group>";
@@ -581,6 +584,7 @@
 				006070792DD193CF009AB627 /* MockBusRepository.swift in Sources */,
 				0060707B2DD19402009AB627 /* HomeViewModelTests.swift in Sources */,
 				0064C6302DD1FF6000E175FB /* SearchViewModelTests.swift in Sources */,
+				00F8A83F2DD34BD4008BCC9B /* DetailViewModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
