@@ -1,4 +1,4 @@
-# 🚌 Bus Routes App
+# 🚌 LankaBusRide
 
 A Swift-based iOS application that displays bus routes and top route filters using the **MVVM** architecture pattern.
 
@@ -11,7 +11,7 @@ This project follows the **Model-View-ViewModel (MVVM)** architecture to promote
 ## 🔍 MVVM Architecture
 
 **Model**  
-- Defines your app's data structure.  
+- Defines app's data structure.  
 - Examples: `BusRoute`, `RouteInfo`
 
 **View**  
@@ -69,5 +69,5 @@ This project is licensed under the MIT License.
 
 ## 🙋‍♂️ Author
 
-- Randika Wanninayaka ([@yourGitHub](https://github.com/randikawann))
+- Randika Wanninayaka ([@randikawann](https://github.com/randikawann))
 
