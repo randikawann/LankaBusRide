@@ -7,7 +7,7 @@
 
 import UIKit
 
-class DetailViewController: UIViewController {
+class DetailViewController: BaseViewController {
     
     var viewModel = DetailViewModel()
     var selectedID: Int?
@@ -25,8 +25,17 @@ class DetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        setupBindings()
         loadData()
+    }
+    
+    private func setupBindings() {
+        viewModel.isLoading = { [weak self] loading in
+            self?.showLoading(loading)
+        }
+        viewModel.didEncounterError = { [weak self] error in
+            self?.showError(error)
+        }
     }
     
     private func loadData() {

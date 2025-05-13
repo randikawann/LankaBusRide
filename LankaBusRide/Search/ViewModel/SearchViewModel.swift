@@ -7,7 +7,10 @@
 
 import Foundation
 
-class SearchViewModel {
+class SearchViewModel: BindableViewModel {
+    var isLoading: ((Bool) -> Void)?
+    var didEncounterError: (((any Error)?) -> Void)?
+    
     typealias RouteNumberChangeHandler = (String) -> Void
     typealias FilteredRoutesChangeHandler = () -> Void
     typealias ErrorHandler = (Error) -> Void
@@ -29,7 +32,6 @@ class SearchViewModel {
     
     var routeNumberDidChange: RouteNumberChangeHandler?
     var filteredRoutesDidChange: FilteredRoutesChangeHandler?
-    var didEncounterError: ErrorHandler?
     
     private let busRepository: BusRepositoryProtocol
     
@@ -57,8 +59,10 @@ class SearchViewModel {
     }
     
     func loadTopRoutes(limit: Int = 3, completion: @escaping () -> Void) {
+        isLoading?(true)
         busRepository.fetchRoutes { [weak self] isSuccess, routes, error in
             DispatchQueue.main.async {
+                self?.isLoading?(true)
                 if isSuccess, let routes = routes {
                     let uniqueRoutes = Array(
                         Set(routes.map { RouteInfo(routeNumber: $0.routeNumber) })
@@ -67,9 +71,7 @@ class SearchViewModel {
                     self?.allRouteInfos = topRoutes
                     self?.allBusRoutes = routes
                 } else {
-                    if error != nil {
-                        self?.didEncounterError?(error!)
-                    }
+                    self?.didEncounterError?(error ?? NetworkError.decodingError)
                     self?.allRouteInfos = []
                     self?.allBusRoutes = []
                 }

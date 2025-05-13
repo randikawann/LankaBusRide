@@ -7,7 +7,10 @@
 
 import Foundation
 
-class DetailViewModel {
+class DetailViewModel: BindableViewModel {
+    var isLoading: ((Bool) -> Void)?
+    
+    var didEncounterError: (((any Error)?) -> Void)?
     
     private(set) var busDetail: BusDetail?
     
@@ -61,12 +64,14 @@ class DetailViewModel {
     }
     
     func loadBusDetail(id: Int = 1, completion: @escaping () -> Void) {
+        isLoading?(true)
         busRepository.fetchBusDetails(busRouteId: id) { [weak self] isSuccess, busDetail, error in
             DispatchQueue.main.async {
+                self?.isLoading?(false)
                 if isSuccess, let busDetail = busDetail {
                     self?.busDetail = busDetail
                 } else {
-                    print("Failed to fetch user:", error?.localizedDescription ?? "Unknown error")
+                    self?.didEncounterError?(error)
                 }
                 completion()
             }

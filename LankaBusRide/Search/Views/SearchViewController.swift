@@ -7,7 +7,7 @@
 
 import UIKit
 
-class SearchViewController: UIViewController {
+class SearchViewController: BaseViewController {
     @IBOutlet weak var recentsRouteTableView: UITableView!
     @IBOutlet weak var filteredBusRouteTableView: UITableView!
     @IBOutlet weak var routeNumberTextField: UITextField!
@@ -16,9 +16,19 @@ class SearchViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupBindings()
         setupTableView()
         loadData()
         
+    }
+    
+    private func setupBindings() {
+        viewModel.isLoading = { [weak self] loading in
+            self?.showLoading(loading)
+        }
+        viewModel.didEncounterError = { [weak self] error in
+            self?.showError(error)
+        }
     }
     
     private func setupTableView() {
@@ -28,9 +38,6 @@ class SearchViewController: UIViewController {
         
         viewModel.filteredRoutesDidChange = { [weak self] in
             self?.filteredBusRouteTableView.reloadData()
-        }
-        viewModel.didEncounterError = { [weak self] error in
-            print("Encountered error: \(error.localizedDescription)")
         }
         
         let nib1 = UINib(nibName: "RouteTableViewCell", bundle: nil)

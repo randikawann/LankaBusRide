@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-class HomeViewController: UIViewController {
+class HomeViewController: BaseViewController {
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var salutation: UILabel!
     
@@ -16,10 +16,20 @@ class HomeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupBindings()
         setupTableView()
         bindViewModel()
         viewModel.loadUser()
         viewModel.loadRoutes()
+    }
+    
+    private func setupBindings() {
+        viewModel.isLoading = { [weak self] loading in
+            self?.showLoading(loading)
+        }
+        viewModel.didEncounterError = { [weak self] error in
+            self?.showError(error)
+        }
     }
     
     private func setupTableView() {

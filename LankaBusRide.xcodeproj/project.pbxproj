@@ -49,6 +49,8 @@
 		00F8A8392DD3219F008BCC9B /* BusDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00F8A8382DD3219F008BCC9B /* BusDetail.swift */; };
 		00F8A83D2DD328F4008BCC9B /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00F8A83C2DD328F4008BCC9B /* DetailViewModel.swift */; };
 		00F8A83F2DD34BD4008BCC9B /* DetailViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00F8A83E2DD34BD4008BCC9B /* DetailViewModelTests.swift */; };
+		00F8A8432DD35A2D008BCC9B /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00F8A8422DD35A2D008BCC9B /* BaseViewController.swift */; };
+		00F8A8462DD35AA9008BCC9B /* BindableViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00F8A8452DD35AA9008BCC9B /* BindableViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -115,6 +117,8 @@
 		00F8A8382DD3219F008BCC9B /* BusDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusDetail.swift; sourceTree = "<group>"; };
 		00F8A83C2DD328F4008BCC9B /* DetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
 		00F8A83E2DD34BD4008BCC9B /* DetailViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModelTests.swift; sourceTree = "<group>"; };
+		00F8A8422DD35A2D008BCC9B /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		00F8A8452DD35AA9008BCC9B /* BindableViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BindableViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -228,6 +232,7 @@
 		00CD4EA02DCF269200F7A801 /* LankaBusRide */ = {
 			isa = PBXGroup;
 			children = (
+				00F8A8402DD35A06008BCC9B /* Base */,
 				00F8A8322DD31F29008BCC9B /* DetailScreen */,
 				00CD4EDD2DCF2C6600F7A801 /* Utilities */,
 				003C5E302DD1BD6E00E705F8 /* Search */,
@@ -410,6 +415,31 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		00F8A8402DD35A06008BCC9B /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				00F8A8442DD35A98008BCC9B /* ViewModel */,
+				00F8A8412DD35A0D008BCC9B /* Views */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		00F8A8412DD35A0D008BCC9B /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				00F8A8422DD35A2D008BCC9B /* BaseViewController.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		00F8A8442DD35A98008BCC9B /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				00F8A8452DD35AA9008BCC9B /* BindableViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -550,8 +580,10 @@
 				00F8A8372DD32102008BCC9B /* DetailViewController.swift in Sources */,
 				00CD4EA22DCF269200F7A801 /* AppDelegate.swift in Sources */,
 				00F8A83D2DD328F4008BCC9B /* DetailViewModel.swift in Sources */,
+				00F8A8432DD35A2D008BCC9B /* BaseViewController.swift in Sources */,
 				00AAB73C2DD1DC0300945157 /* BusRoute.swift in Sources */,
 				00CD4F012DCF3FA600F7A801 /* UserDTO+Extensions.swift in Sources */,
+				00F8A8462DD35AA9008BCC9B /* BindableViewModel.swift in Sources */,
 				00CD4EF92DCF391000F7A801 /* BusRouteDTO+Extensions.swift in Sources */,
 				00CD4EF22DCF312300F7A801 /* NetworkError+Extensions.swift in Sources */,
 				00CD4EFD2DCF3DCB00F7A801 /* UserRepository.swift in Sources */,
