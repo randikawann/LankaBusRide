@@ -70,8 +70,12 @@ class SearchViewModel: BindableViewModel {
                     let topRoutes = Array(uniqueRoutes.prefix(limit))
                     self?.allRouteInfos = topRoutes
                     self?.allBusRoutes = routes
+                } else if error != nil {
+                    self?.didEncounterError?(error)
+                    self?.allRouteInfos = []
+                    self?.allBusRoutes = []
                 } else {
-                    self?.didEncounterError?(error ?? NetworkError.decodingError)
+                    self?.didEncounterError?(NetworkError.defaultError)
                     self?.allRouteInfos = []
                     self?.allBusRoutes = []
                 }

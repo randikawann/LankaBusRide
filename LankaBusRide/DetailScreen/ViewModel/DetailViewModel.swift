@@ -70,8 +70,10 @@ class DetailViewModel: BindableViewModel {
                 self?.isLoading?(false)
                 if isSuccess, let busDetail = busDetail {
                     self?.busDetail = busDetail
-                } else {
+                } else if error != nil {
                     self?.didEncounterError?(error)
+                } else {
+                    self?.didEncounterError?(NetworkError.defaultError)
                 }
                 completion()
             }

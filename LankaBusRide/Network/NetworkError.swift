@@ -12,4 +12,5 @@ enum NetworkError: Error {
     case noData
     case decodingError
     case custom(Error)
+    case defaultError
 }

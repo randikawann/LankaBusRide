@@ -16,6 +16,8 @@ extension NetworkError: LocalizedError {
             return "No data was received from the server."
         case .decodingError:
             return "Failed to decode the response."
+        case .defaultError:
+            return "Something went wrong"
         case .custom(let error):
             return error.localizedDescription
         }

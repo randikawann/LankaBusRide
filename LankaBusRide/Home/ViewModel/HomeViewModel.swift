@@ -35,8 +35,10 @@ class HomeViewModel: BindableViewModel {
             self?.isLoading?(false)
             if isSuccess, let user = user {
                 self?.user = user
-            } else {
+            } else if error != nil {
                 self?.didEncounterError?(error)
+            } else {
+                self?.didEncounterError?(NetworkError.defaultError)
             }
         }
     }
@@ -47,8 +49,10 @@ class HomeViewModel: BindableViewModel {
             self?.isLoading?(false)
             if isSuccess, let routes = routes {
                 self?.routes = routes
-            } else {
+            } else if error != nil {
                 self?.didEncounterError?(error)
+            } else {
+                self?.didEncounterError?(NetworkError.defaultError)
             }
         }
     }
