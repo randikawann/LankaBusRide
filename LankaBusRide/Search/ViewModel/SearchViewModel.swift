@@ -50,7 +50,7 @@ class SearchViewModel {
     
     private func filterRoutes(for route: RouteInfo?) {
         if let route = route {
-            filteredBusRoutes = allBusRoutes.filtered(by: route)
+            filteredBusRoutes = allBusRoutes.filteredByRoute(by: route)
         } else {
             filteredBusRoutes = []
         }

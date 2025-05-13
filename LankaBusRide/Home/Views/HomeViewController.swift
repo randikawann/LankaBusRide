@@ -27,13 +27,13 @@ class HomeViewController: UIViewController {
         tableView.register(nib, forCellReuseIdentifier: "AvailableBusesCardTableViewCell")
         tableView.rowHeight = 100
         tableView.dataSource = self
+        tableView.delegate = self
     }
     private func bindViewModel() {
         viewModel.onUserDataUpdate = { [weak self] in
             DispatchQueue.main.async {
                 guard let user = self?.viewModel.user else { return }
                 self?.salutation.text = "Hi "+user.name
-                //                self?.emailLabel.text = user.email
             }
         }
         
@@ -45,7 +45,7 @@ class HomeViewController: UIViewController {
     }
 }
 
-extension HomeViewController: UITableViewDataSource {
+extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return viewModel.routes.count
     }
@@ -63,5 +63,15 @@ extension HomeViewController: UITableViewDataSource {
         cell.routeNumber.text = route.routeNumber
         cell.duration.text = route.duration
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+
+        let storyboard = UIStoryboard(name: "Home", bundle: nil)
+        if let detailVC = storyboard.instantiateViewController(withIdentifier: String(describing: DetailViewController.self)) as? DetailViewController {
+            detailVC.selectedID = viewModel.routes[indexPath.row].id
+            navigationController?.pushViewController(detailVC, animated: true)
+        }
+        
     }
 }

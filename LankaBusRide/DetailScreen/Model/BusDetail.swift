@@ -1,15 +1,16 @@
 //
-//  BusRouteDTO.swift
+//  BusDetail.swift
 //  LankaBusRide
 //
-//  Created by ranCreation on 2025-05-10.
+//  Created by ranCreation on 2025-05-13.
 //
 
 import Foundation
 
-struct BusRouteDTO: Codable {
+struct BusDetail {
     let id: Int
-    let company: String
+    let title: String
+    let companyName: String
     let source: String
     let destination: String
     let departure: String

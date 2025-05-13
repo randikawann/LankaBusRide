@@ -45,6 +45,9 @@
 		00CD4EFD2DCF3DCB00F7A801 /* UserRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00CD4EFC2DCF3DCB00F7A801 /* UserRepository.swift */; };
 		00CD4EFF2DCF3E2700F7A801 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00CD4EFE2DCF3E2700F7A801 /* User.swift */; };
 		00CD4F012DCF3FA600F7A801 /* UserDTO+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00CD4F002DCF3FA600F7A801 /* UserDTO+Extensions.swift */; };
+		00F8A8372DD32102008BCC9B /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00F8A8362DD32102008BCC9B /* DetailViewController.swift */; };
+		00F8A8392DD3219F008BCC9B /* BusDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00F8A8382DD3219F008BCC9B /* BusDetail.swift */; };
+		00F8A83D2DD328F4008BCC9B /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00F8A83C2DD328F4008BCC9B /* DetailViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -107,6 +110,9 @@
 		00CD4EFC2DCF3DCB00F7A801 /* UserRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRepository.swift; sourceTree = "<group>"; };
 		00CD4EFE2DCF3E2700F7A801 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		00CD4F002DCF3FA600F7A801 /* UserDTO+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDTO+Extensions.swift"; sourceTree = "<group>"; };
+		00F8A8362DD32102008BCC9B /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		00F8A8382DD3219F008BCC9B /* BusDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusDetail.swift; sourceTree = "<group>"; };
+		00F8A83C2DD328F4008BCC9B /* DetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -220,6 +226,7 @@
 		00CD4EA02DCF269200F7A801 /* LankaBusRide */ = {
 			isa = PBXGroup;
 			children = (
+				00F8A8322DD31F29008BCC9B /* DetailScreen */,
 				00CD4EDD2DCF2C6600F7A801 /* Utilities */,
 				003C5E302DD1BD6E00E705F8 /* Search */,
 				00CD4ED72DCF295700F7A801 /* Home */,
@@ -366,6 +373,40 @@
 			path = CustomViews;
 			sourceTree = "<group>";
 		};
+		00F8A8322DD31F29008BCC9B /* DetailScreen */ = {
+			isa = PBXGroup;
+			children = (
+				00F8A8352DD32054008BCC9B /* Views */,
+				00F8A8342DD3204A008BCC9B /* ViewModel */,
+				00F8A8332DD32043008BCC9B /* Model */,
+			);
+			path = DetailScreen;
+			sourceTree = "<group>";
+		};
+		00F8A8332DD32043008BCC9B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				00F8A8382DD3219F008BCC9B /* BusDetail.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		00F8A8342DD3204A008BCC9B /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				00F8A83C2DD328F4008BCC9B /* DetailViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		00F8A8352DD32054008BCC9B /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				00F8A8362DD32102008BCC9B /* DetailViewController.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -503,7 +544,9 @@
 			files = (
 				0064C62E2DD1FD8F00E175FB /* BusRoute+Extensions.swift in Sources */,
 				00CD4EA62DCF269200F7A801 /* ViewController.swift in Sources */,
+				00F8A8372DD32102008BCC9B /* DetailViewController.swift in Sources */,
 				00CD4EA22DCF269200F7A801 /* AppDelegate.swift in Sources */,
+				00F8A83D2DD328F4008BCC9B /* DetailViewModel.swift in Sources */,
 				00AAB73C2DD1DC0300945157 /* BusRoute.swift in Sources */,
 				00CD4F012DCF3FA600F7A801 /* UserDTO+Extensions.swift in Sources */,
 				00CD4EF92DCF391000F7A801 /* BusRouteDTO+Extensions.swift in Sources */,
@@ -513,6 +556,7 @@
 				00CD4ED92DCF2C0D00F7A801 /* APIManager.swift in Sources */,
 				00CD4EAC2DCF269200F7A801 /* LankaBusRide.xcdatamodeld in Sources */,
 				003C5E352DD1BE5C00E705F8 /* SearchViewController.swift in Sources */,
+				00F8A8392DD3219F008BCC9B /* BusDetail.swift in Sources */,
 				00CD4EEA2DCF2E9200F7A801 /* BusRepository.swift in Sources */,
 				00AAB7432DD1E0B800945157 /* RouteTableViewCell.swift in Sources */,
 				00CD4EF02DCF2FB400F7A801 /* HomeViewController.swift in Sources */,
