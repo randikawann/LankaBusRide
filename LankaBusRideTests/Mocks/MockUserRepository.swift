@@ -11,12 +11,12 @@ import Foundation
 
 final class MockUserRepository: UserRepositoryProtocol {
     var mockUser: User?
-
-    func fetchUser(completion: @escaping (Result<User, Error>) -> Void) {
+    
+    func fetchUser(completion: @escaping (Bool, User?, NetworkError?) -> Void) {
         if let user = mockUser {
-            completion(.success(user))
+            completion(true, user, nil)
         } else {
-            completion(.failure(NSError(domain: "", code: -1)))
+            completion(false, nil, .noData)
         }
     }
 }

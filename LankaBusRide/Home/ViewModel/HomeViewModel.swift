@@ -27,23 +27,21 @@ class HomeViewModel {
     }
     
     func loadUser() {
-        userRepository.fetchUser { [weak self] result in
-            switch result {
-            case .success(let user):
+        userRepository.fetchUser { [weak self] isSuccess, user, error in
+            if isSuccess, let user = user {
                 self?.user = user
-            case .failure(let error):
-                print("Failed to fetch user:", error)
+            } else {
+                print("Failed to fetch user:", error?.localizedDescription ?? "Unknown error")
             }
         }
     }
     
     func loadRoutes() {
-        busRepository.fetchRoutes { [weak self] result in
-            switch result {
-            case .success(let routes):
+        busRepository.fetchRoutes { [weak self] isSuccess, routes, error in
+            if isSuccess, let routes = routes {
                 self?.routes = routes
-            case .failure(let error):
-                print("Failed to fetch routes:", error)
+            } else {
+                print("Failed to fetch routes:", error?.localizedDescription ?? "Unknown error")
             }
         }
     }

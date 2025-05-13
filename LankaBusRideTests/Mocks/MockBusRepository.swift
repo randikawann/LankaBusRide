@@ -13,15 +13,15 @@ final class MockBusRepository: BusRepositoryProtocol {
     var mockBusDetail: BusDetail?
     var shouldReturnError = false
     
-    func fetchRoutes(completion: @escaping (Result<[BusRoute], Error>) -> Void) {
-        completion(.success(mockRoutes))
+    func fetchRoutes(completion: @escaping (Bool, [BusRoute]?, NetworkError?) -> Void) {
+        completion(true, mockRoutes, nil)
     }
     
-    func fetchBusDetails(busRouteId: Int, completion: @escaping (Result<LankaBusRide.BusDetail?, any Error>) -> Void) {
+    func fetchBusDetails(busRouteId: Int, completion: @escaping (Bool, BusDetail?, NetworkError?) -> Void) {
         if shouldReturnError {
-            completion(.failure(NSError(domain: "Test", code: 1, userInfo: nil)))
+            completion(false, nil, .noData)
         } else if let detail = mockBusDetail {
-            completion(.success(detail))
+            completion(true, detail, nil)
         }
     }
 }

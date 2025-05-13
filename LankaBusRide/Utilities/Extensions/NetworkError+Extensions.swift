@@ -14,10 +14,10 @@ extension NetworkError: LocalizedError {
             return "The URL provided was invalid."
         case .noData:
             return "No data was received from the server."
-        case .decodingFailed:
+        case .decodingError:
             return "Failed to decode the response."
-        case .unknown:
-            return "An unknown network error occurred."
+        case .custom(let error):
+            return error.localizedDescription
         }
     }
 }

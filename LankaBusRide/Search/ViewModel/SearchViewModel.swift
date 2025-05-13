@@ -57,19 +57,19 @@ class SearchViewModel {
     }
     
     func loadTopRoutes(limit: Int = 3, completion: @escaping () -> Void) {
-        busRepository.fetchRoutes { [weak self] result in
+        busRepository.fetchRoutes { [weak self] isSuccess, routes, error in
             DispatchQueue.main.async {
-                switch result {
-                case .success(let routes):
+                if isSuccess, let routes = routes {
                     let uniqueRoutes = Array(
                         Set(routes.map { RouteInfo(routeNumber: $0.routeNumber) })
                     )
                     let topRoutes = Array(uniqueRoutes.prefix(limit))
                     self?.allRouteInfos = topRoutes
                     self?.allBusRoutes = routes
-                    
-                case .failure(let error):
-                    self?.didEncounterError?(error)
+                } else {
+                    if error != nil {
+                        self?.didEncounterError?(error!)
+                    }
                     self?.allRouteInfos = []
                     self?.allBusRoutes = []
                 }

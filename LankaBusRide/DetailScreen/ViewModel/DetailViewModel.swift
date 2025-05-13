@@ -61,14 +61,12 @@ class DetailViewModel {
     }
     
     func loadBusDetail(id: Int = 1, completion: @escaping () -> Void) {
-        busRepository.fetchBusDetails(busRouteId: id) { [weak self] result in
+        busRepository.fetchBusDetails(busRouteId: id) { [weak self] isSuccess, busDetail, error in
             DispatchQueue.main.async {
-                switch result {
-                case .success(let busDetail):
+                if isSuccess, let busDetail = busDetail {
                     self?.busDetail = busDetail
-                    
-                case .failure(let error):
-                    print("Error")
+                } else {
+                    print("Failed to fetch user:", error?.localizedDescription ?? "Unknown error")
                 }
                 completion()
             }
