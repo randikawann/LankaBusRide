@@ -7,7 +7,10 @@
 
 import Foundation
 
-class HomeViewModel {
+class HomeViewModel: BindableViewModel {
+    var isLoading: ((Bool) -> Void)?
+    var didEncounterError: (((any Error)?) -> Void)?
+
     private let busRepository: BusRepositoryProtocol
     private let userRepository: UserRepositoryProtocol
     var onUserDataUpdate: (() -> Void)?
@@ -27,23 +30,29 @@ class HomeViewModel {
     }
     
     func loadUser() {
-        userRepository.fetchUser { [weak self] result in
-            switch result {
-            case .success(let user):
+        isLoading?(true)
+        userRepository.fetchUser { [weak self] isSuccess, user, error in
+            self?.isLoading?(false)
+            if isSuccess, let user = user {
                 self?.user = user
-            case .failure(let error):
-                print("Failed to fetch user:", error)
+            } else if error != nil {
+                self?.didEncounterError?(error)
+            } else {
+                self?.didEncounterError?(NetworkError.defaultError)
             }
         }
     }
     
     func loadRoutes() {
-        busRepository.fetchRoutes { [weak self] result in
-            switch result {
-            case .success(let routes):
+        isLoading?(true)
+        busRepository.fetchRoutes { [weak self] isSuccess, routes, error in
+            self?.isLoading?(false)
+            if isSuccess, let routes = routes {
                 self?.routes = routes
-            case .failure(let error):
-                print("Failed to fetch routes:", error)
+            } else if error != nil {
+                self?.didEncounterError?(error)
+            } else {
+                self?.didEncounterError?(NetworkError.defaultError)
             }
         }
     }

@@ -11,26 +11,31 @@ final class APIManager {
     static let shared = APIManager()
     private init() {}
     
-    func request<T: Decodable>(endpoint: Endpoint, completion: @escaping (Result<T, Error>) -> Void) {
+    func request<T: Decodable>(
+        endpoint: Endpoint,
+        completion: @escaping (Bool, T?, NetworkError?) -> ()
+    ) {
         guard let url = URL(string: endpoint.url) else {
-            completion(.failure(NetworkError.invalidURL))
+            completion(false, nil, .invalidURL)
             return
         }
         
         URLSession.shared.dataTask(with: url) { data, response, error in
             if let error = error {
-                completion(.failure(error)); return
+                completion(false, nil, .custom(error))
+                return
             }
             
             guard let data = data else {
-                completion(.failure(NetworkError.noData)); return
+                completion(false, nil, .noData)
+                return
             }
             
             do {
                 let decoded = try JSONDecoder().decode(T.self, from: data)
-                completion(.success(decoded))
+                completion(true, decoded, nil)
             } catch {
-                completion(.failure(error))
+                completion(false, nil, .decodingError)
             }
         }.resume()
     }
