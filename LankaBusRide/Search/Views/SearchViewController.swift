@@ -106,6 +106,12 @@ extension SearchViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if tableView == recentsRouteTableView {
             viewModel.selectedRoute = viewModel.allRouteInfos[indexPath.row]
+        } else {
+            let storyboard = UIStoryboard(name: "Home", bundle: nil)
+            if let detailVC = storyboard.instantiateViewController(withIdentifier: String(describing: DetailViewController.self)) as? DetailViewController {
+                detailVC.selectedID = viewModel.allBusRoutes[indexPath.row].id
+                navigationController?.pushViewController(detailVC, animated: true)
+            }
         }
     }
 }
