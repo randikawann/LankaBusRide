@@ -29,6 +29,11 @@ This project follows the **Model-View-ViewModel (MVVM)** architecture to promote
 
 ---
 
+## 🔍 ScreenShots
+
+<img src = "branchscreenshot/LankaBusRide01.png"  height="300" /> <img src = "branchscreenshot/LankaBusRide02.png"  height="300" /> <img src = "branchscreenshot/LankaBusRide03.png"  height="300" /> <img src = "branchscreenshot/LankaBusRide04.png"  height="300" />
+
+---
 ## ✅ Features
 
 - Fetch and display bus routes from a data source.
