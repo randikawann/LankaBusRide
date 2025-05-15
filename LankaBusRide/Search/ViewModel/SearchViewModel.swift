@@ -62,7 +62,7 @@ class SearchViewModel: BindableViewModel {
         isLoading?(true)
         busRepository.fetchRoutes { [weak self] isSuccess, routes, error in
             DispatchQueue.main.async {
-                self?.isLoading?(true)
+                self?.isLoading?(false)
                 if isSuccess, let routes = routes {
                     let uniqueRoutes = Array(
                         Set(routes.map { RouteInfo(routeNumber: $0.routeNumber) })
